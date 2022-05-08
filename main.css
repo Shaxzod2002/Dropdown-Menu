@@ -1,0 +1,157 @@
+* {
+    font-family: 'Akshar', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation {
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.navigation .userBox {
+    position: relative;
+    width: 50%;
+    transition: all 1s ease-in-out;
+    height: 20%;
+    background: #bbb;
+    border-radius: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation .userBox.active {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.navigation .userBox .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .userBox .image img {  
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navigation .userBox .dews {
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    display: inline;
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation .userBox .dews.active {
+    width: 181px;
+    height: 18px;
+    transform: scale(1);
+}
+
+.navigation .userBox .bars {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navigation .userBox .bars span {
+    position: absolute;
+    top: 25%;
+    transition: all 0.5s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    cursor: pointer;
+    background: #000;
+    cursor: pointer;
+}
+
+.navigation .userBox .bars span:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    transition: all 0.5s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #000;
+    cursor: pointer;
+}
+
+.navigation .userBox .bars span:nth-child(3) {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #000;
+    cursor: pointer;
+}
+
+.one-span.active {
+    height: 3px !important;
+    transform: scale(.6) translate(-20px, 20px) rotate(50deg) !important;
+}
+
+.two-span.active {
+    height: 3px !important;
+    transform: scale(.6) translate(-20px,0) rotate(-50deg) !important;
+}
+
+.three-span.active {
+    display: none;
+}
+
+.navigation .menuToggle {
+    width: 100%;
+    transform: scale(0);
+    transition: all 0.5s ease-in-out;
+    height: 80%;
+    background: #bbb;
+    line-height: 1.8em;
+}
+
+.navigation .menuToggle.active {
+    transform:  scale(1) translate(0, 2px) !important;
+}
+
+.navigation .menuToggle ul {
+    list-style: none;
+    width: 40%;
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+
+.navigation .menuToggle ul li {
+    padding: 5px 10px;
+}
+
+.navigation .menuToggle ul li:hover {
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    color: gold;
+}
